@@ -3,3 +3,4 @@ var/
 .project
 errors/
 media/catalog/
+app/etc/local.xml
