@@ -2,5 +2,6 @@ var/
 .idea/
 .project
 errors/
-media/catalog/
+media/catalog/product/cache/
+media/wysiwyg/.thumbs/
 app/etc/local.xml
