@@ -636,3 +636,115 @@ body {
 .clearfix {
   zoom: 1;
 }
+
+
+
+
+/* ---  PAIPAI NO MARGIN GRID --- */
+.container_24 .ngrid_1 {
+	width:59px;
+}
+
+.container_24 .ngrid_2 {
+	width:118px;
+}
+
+.container_24 .ngrid_3 {
+	width:177px;
+}
+
+.container_24 .ngrid_4 {
+	width:236px;
+}
+
+.container_24 .ngrid_5 {
+	width:295px;
+}
+
+.container_24 .ngrid_6 {
+	width:354px;
+}
+
+.container_24 .ngrid_7 {
+	width:413px;
+}
+
+.container_24 .ngrid_8 {
+	width:472px;
+}
+
+.container_24 .ngrid_9 {
+	width:531px;
+}
+
+.container_24 .ngrid_10 {
+	width:590px;
+}
+
+.container_24 .ngrid_11 {
+	width:649px;
+}
+
+.container_24 .ngrid_12 {
+	width:708px;
+}
+
+.container_24 .ngrid_13 {
+	width:767px;
+}
+
+.container_24 .ngrid_14 {
+	width:826px;
+}
+
+.container_24 .ngrid_15 {
+	width:885px;
+}
+
+.container_24 .ngrid_16 {
+	width:944px;
+}
+
+.container_24 .ngrid_17 {
+	width:1003px;
+}
+
+.container_24 .ngrid_18 {
+	width:1062px;
+}
+
+.container_24 .ngrid_19 {
+	width:1121px;
+}
+
+.container_24 .ngrid_20 {
+	width:1180px;
+}
+.ngrid_1,
+.ngrid_2,
+.ngrid_3,
+.ngrid_4,
+.ngrid_5,
+.ngrid_6,
+.ngrid_7,
+.ngrid_8,
+.ngrid_9,
+.ngrid_10,
+.ngrid_11,
+.ngrid_12,
+.ngrid_13,
+.ngrid_14,
+.ngrid_15,
+.ngrid_16,
+.ngrid_17,
+.ngrid_18,
+.ngrid_19,
+.ngrid_20,
+.ngrid_21,
+.ngrid_22,
+.ngrid_23,
+.ngrid_24 {
+	display:inline;
+	float: left;
+	position: relative;
+}
