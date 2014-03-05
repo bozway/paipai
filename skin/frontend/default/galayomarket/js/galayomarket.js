@@ -90,6 +90,7 @@ EM.tools.decorateProductCollateralTabs = function() {
 };
 
 function toogleMenuPro(){
+    i = 0;
 	var container = $("#vertical-menu-wrapper");
 	if(!trigger){
 		if(isMobile == false){
@@ -97,18 +98,22 @@ function toogleMenuPro(){
 				$("#displayText").unbind("click");
 				if (!($("body").hasClass("cms-index-index"))){
 					container.hide();
-					$("#vertical-menu-wrapper").parent().hover(
+                    $("#vertical-menu-wrapper").parent().unbind('hover');
+                    $("#vertical-menu-wrapper").parent().hover(
 						function( event ){
 							event.preventDefault();
-							container.fadeToggle('fast');
+                            event.stopPropagation();
+                            container.fadeToggle('fast');
 						}
 					);
 				}
 			}else{
 				$("#vertical-menu-wrapper").parent().unbind("mouseenter mouseleave");
 				container.hide();
+                $("#displayText").unbind('click');
 				$("#displayText").click(
 					function( event ){
+                        event.stopPropagation();
 						event.preventDefault();
 						container.fadeToggle('fast');
 					}
@@ -289,7 +294,7 @@ $(window).bind('orientationchange', function () {
 });
 
 $(window).bind('emadaptchange orientationchange', function() {
-	toogleMenuPro();
+    toogleMenuPro();
 	trigger = false; 
 });
 	

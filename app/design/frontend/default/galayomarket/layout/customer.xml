@@ -97,7 +97,7 @@ Layout for customer login page
                 <crumbName>home</crumbName>
                 <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
             </action>
-           
+
             <action method="addCrumb">
                 <crumbName>login</crumbName>
                 <crumbInfo><label>Login</label><title>Login</title></crumbInfo>
@@ -260,7 +260,6 @@ Customer account pages, rendered for all tabs in dashboard
             </block>            
             <block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
             <remove name="tags_popular"/>
-
         </reference>
         <reference name="breadcrumbs">
             <action method="addCrumb">
