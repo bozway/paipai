@@ -100,7 +100,8 @@ function toogleMenuPro(){
 					$("#vertical-menu-wrapper").parent().hover(
 						function( event ){
 							event.preventDefault();
-							container.fadeToggle('fast');
+                            event.stopPropagation();
+                            container.fadeToggle('fast');
 						}
 					);
 				}
