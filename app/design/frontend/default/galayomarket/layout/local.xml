@@ -33,4 +33,16 @@
             </block>
         </reference>
     </customer_account>
+    <contacts_index_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>contact_us</crumbName>
+                <crumbInfo><label>Contact Us</label><title>Contact Us</title></crumbInfo>
+            </action>
+        </reference>
+    </contacts_index_index>
 </layout>
