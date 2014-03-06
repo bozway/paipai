@@ -40,7 +40,6 @@
 
 <?php list($_prev_prod, $_next_prod) = Mage::helper('yomarketsettings/product')->getPreviousNextProducts($this->getProduct()); ?>
 
-<!--
 <div id = "prev_next" >
     <?php if($_prev_prod != NULL): ?>
     <div class="previous_wrap"><a title="<?php echo $this->__('Previous Product') ?>" href="<?php echo $_prev_prod->getProductUrl(); ?>" class="button_previous"><?php echo $this->__('Previous Product') ?></a></div>
@@ -50,7 +49,7 @@
     <div class="next_wrap"><a title="<?php echo $this->__('Next Product') ?>" href="<?php echo $_next_prod->getProductUrl(); ?>" class="button_next"><?php echo $this->__('Next Product') ?></a></div>
     <?php endif; ?>
 </div>
--->
+
 
             
 
@@ -67,94 +66,35 @@
             <?php echo $this->getChildHtml('media') ?>
         </div>
 
-		<div class="product-shop" style="margin-left:<?php echo Mage::helper('yomarketsettings')->getImageProduct_BaseImageWidth(360)+20 ?>px">
+        <div class="product-shop" style="margin-left:<?php echo Mage::helper('yomarketsettings')->getImageProduct_BaseImageWidth(360)+20 ?>px">
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
 
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            
-            <!-- Product SKU -->
-            <div><?= $this->__('SKU: '); ?><?= $_product->getSku();?></div>
-
-            <!-- Product Brand -->
-            <div><?= $this->__('Brand: '); ?><?= $_product->getAttributeText('manufacturer');?></div>
-
-
-            <!-- Product Manufacturing Country -->
-            <div><?= $this->__('Manufacture country: '); ?><?= $_product->getAttributeText('country_of_manufacture');?></div>
-            <div><?= $this->__('Weight: '); ?><?= $_product->getWeight();?></div>
-
-
-            <?php 
-                $block = Mage::app()->getLayout()->createBlock('catalog/product_list');
-                $html = $block->getReviewsSummaryHtml($_product, 'short');
-            ?>
-            <div><?= $this->__('Ratings: ');?><?= $html;?></div>
-
-
-            <!--
             <?php if ($this->canEmailToFriend()): ?>
                 <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
             <?php endif; ?>
-            
+
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <?php echo $this->getChildHtml('alert_urls') ?>
             <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
             
-            <div class="Social_icon">
-				<div id="fb-root"></div>
-				<div class="facebook">
-					<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));</script>
-					<?php $curr = 'data-href="'.$this->helper('core/url')->getCurrentUrl().'"'; ?>
-					<div class="fb-like" <?php echo $curr; ?> data-send="false" data-layout="button_count" data-width="150" data-show-faces="true"></div>
-				</div>			
 
-				<script type="text/javascript">
-				  (function() {
-					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-					po.src = 'https://apis.google.com/js/plusone.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-				  })();
-				</script>
-				
-				<div class="twitter">
-				<a href="https://twitter.com/share" class="twitter-share-button" >Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-
-				<div class="gplus">				                
-                    <script  type="text/javascript"  src="https://apis.google.com/js/plusone.js"></script>
-                    <g:plusone size="medium"></g:plusone>
-                </div>
-			</div>
-            -->
-            	
             <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>
                         <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                            <span class="or"><?php echo $this->__('OR') ?></span>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
                 <?php echo $this->getChildHtml('extra_buttons') ?>
-            <?php elseif (!$_product->isSaleable()): ?>
-                <div class="add-to-box">
-                    <?php echo $this->getChildHtml('addto') ?>
-                </div>
             <?php endif; ?>
             
-            <!--
+
             <?php if ($_product->getShortDescription()):?>
                 <div class="short-description">
                     <h2><?php echo $this->__('Quick Overview') ?></h2>
@@ -163,7 +103,6 @@
             <?php endif;?>
             <?php echo $this->getChildHtml('other');?>
             <?php echo $this->getChildHtml('short_des_after'); ?>
-            -->
 
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
@@ -237,19 +176,16 @@
             <?php endif;?>
             <?php echo $html; ?>
         </div>
-		<?php endforeach;?>
-
-		<?php echo $this->getChildHtml('review_list') ?>
-        <?php echo $this->getChildHtml('product_additional_collateral') ?>
-        <!--
+        <?php endforeach;?>
+        <?php echo $this->getChildHtml('review_list') ?>
         <?php echo $this->getChildHtml('upsell_products') ?>
         <?php echo $this->getChildHtml('product_additional_data') ?>
-        -->
+        <?php echo $this->getChildHtml('product_additional_collateral') ?>
     </div>
     
-	<?php if (Mage::helper('yomarketsettings')->getImageProduct_UseTabs()): ?>
-	<script type="text/javascript">
-		  EM.tools.decorateProductCollateralTabs();
-	</script>
-	<?php endif ?>
+    <?php if (Mage::helper('yomarketsettings')->getImageProduct_UseTabs()): ?>
+    <script type="text/javascript">
+          EM.tools.decorateProductCollateralTabs();
+    </script>
+    <?php endif ?>
 </div>

@@ -16,17 +16,29 @@
         </reference>
     </catalogsearch_result_index>
 
-    <catalog_product_view translate="label">
+    <catalog_product_view>
     	<reference name="product.info">
     		<action method="setTemplate">
     			<template>customization/catalog/product/view.phtml</template>
     		</action>
     	</reference>
         <reference name="left">
-            <remove name="left.catalog.compare.sidebar" />
+            <block type="catalog/product_list_upsell" template="catalog/product/list/upsell.phtml" before="catalog.product.related" />
+            <remove name="left.catalog.compare.sidebar" /> 
             <remove name="left.poll" />
         </reference>
     </catalog_product_view>
+
+    <review_product_list>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="product.info">
+            <action method="setTemplate">
+                <template>customization/review/product/view.phtml</template>
+            </action>
+        </reference>
+    </review_product_list>
 
     <customer_account_login translate="label">
         <label>Customer Account Login Form</label>

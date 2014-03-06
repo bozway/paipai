@@ -16,4 +16,9 @@
 "Retrieve your password here","找回你的密码?"
 "Please enter your email address below. You will receive a link to reset your password.","请输入邮件地址,你将会收到一个链接来从新设置你的密码."
 "Back to Login","返回登录"
-
+"SKU: ", "商品编号："
+"Brand: ", "品牌"
+"Manufacture country: ", "产地："
+"Weight: ", "净含量："
+"Ratings: ", "商品评价："
+"Additional Info", "附加信息"
