@@ -1,4 +1,13 @@
 @primary_backround_color:       #fe8900;
+@secondary_background_color:    #78a700;
+.container_24:not(.header-container){
+    margin-bottom:          15px;
+    &:after{
+        content:            "";
+        clear:              both;
+        display:            block;
+    }
+}
 .ui-tabs .ui-tabs-nav li.ui-corner-top{
     float:                  left;
     a{
@@ -6,7 +15,7 @@
     }
 }
 .new-product-item{
-    border-right:             2px solid gray;
+    border-right:             1px solid gray;
     padding-right:            20px !important;
     &:last-child{
         border-right:           0px;   
@@ -34,4 +43,22 @@
         background-color:       @primary_backround_color;
         color:                  #ffffff;
     }
+}
+.csslider .controls a{
+    top:                        29px !important;   
+}
+.tabs_control{
+    li.ui-state-default{
+        a{
+            background:       @primary_backround_color !important;
+            color:               #ffffff !important; 
+            padding:             10px 18px !important;  
+        }
+        &.ui-tabs-selected, &:hover{
+            a{
+                background:    @secondary_background_color !important;
+            }
+        }
+    }
+    
 }
