@@ -4,27 +4,12 @@
 @primary_background_color:       #f28d2b;
 @secondary_background_color:     #80a111;
 
-//footer 
-.footer{
-    background-color:      @primary_background_color;
-    color:                 #ffffff;
-    p{
-        margin:             0px;   
-    }
-}
-
-//bottom payment and social 
-.em-area11{
-    padding:                20px 0px 60px 0px;
-    .grid_12.alpha{
-        p:first-of-type{
-            padding-left:       50px; 
-        }
-    }
-    .grid_12.omega{
-        p:last-of-type{
-            padding-right:      50px; 
-        }
+.container_24:not(.header-container,.em-footerinfo){
+    margin-bottom:          15px;
+    &:after{
+        content:            "";
+        clear:              both;
+        display:            block;
     }
 }
 
@@ -33,6 +18,8 @@
     border-top:                     none !important;
     border-bottom:                  none !important;
     padding-top:                    20px;
+    background:                     linear-gradient(to bottom, #ffffff 0%, #ebebeb 40%) repeat scroll 0 0 rgba(0,0,0,0) !important;
+    margin-bottom:                  0px !important;
     p.h5{
         color:                  @primary_background_color;
         border-left:            8px solid @primary_background_color;
@@ -52,6 +39,52 @@
     }
 }
 
+//bottom payment and social 
+.em-area11{
+    padding:                20px 0px 60px 0px;
+    background:             linear-gradient(to bottom, #ebebeb 40%, #ebebeb 100%) repeat scroll 0 0 rgba(0,0,0,0) !important;
+    .grid_12.alpha{
+        p:first-of-type{
+            padding-left:       50px; 
+        }
+    }
+    .grid_12.omega{
+        p:last-of-type{
+            padding-right:      50px; 
+        }
+    }
+}
+
+//footer 
+.footer{
+    background-color:      @primary_background_color;
+    color:                 #ffffff;
+    p{
+        margin:             0px;   
+    }
+}
+
+//cart
+#link-top-cart{
+    background-color:       @primary_background_color;
+    a{
+        background:                 none !important;
+        span{
+            color:                  #ffffff;
+        }
+    }
+}
+#displayTextCart{
+    height:                 37px;
+}
+    
+
+//vertical navigation
+.shopby-title{
+    text-align:                 center;   
+}
+
+//breadcrumbs
 .breadcrumbs{
     li strong{
         color:              @primary_background_color !important;   
@@ -67,11 +100,12 @@ p.required{
 }
 
 .page-title{
-    border-left:                8px solid @primary_background_color;
+    border-left:                8px solid @primary_background_color !important;
     h1{
         font-size:              100% !important;
         color:                  @primary_background_color !important;
         padding:                6px 16px !important;
+        background:             none !important;
     }
 }
 .box-head{
