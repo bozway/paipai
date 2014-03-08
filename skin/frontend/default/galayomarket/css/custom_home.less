@@ -1,18 +1,41 @@
 @primary_background_color:       #f28d2b;
 @secondary_background_color:     #80a111;
-.container_24:not(.header-container){
-    margin-bottom:          15px;
-    &:after{
-        content:            "";
-        clear:              both;
-        display:            block;
-    }
-}
 .ui-tabs .ui-tabs-nav li.ui-corner-top{
     float:                  left;
     a{
         margin-bottom:      0px;  
     }
+}
+
+//brand list
+#brands{
+    border:                     1px solid #d4d4d4;
+    .brand-title{
+        font-size:              16px;
+        text-align:             center;
+        line-height:            68px;
+        background-color:       @primary_background_color;
+        color:                  #ffffff;
+    }
+}
+.csslider .controls a{
+    top:                        29px !important;   
+}
+
+//tabs
+.tabs_control{
+    li.ui-state-default{
+        a{
+            background:       @primary_background_color !important;
+            color:               #ffffff !important; 
+            padding:             10px 18px !important;  
+        }
+        &.ui-tabs-selected, &:hover{
+            a{
+                background:    @secondary_background_color !important;
+            }
+        }
+    }   
 }
 .new-product-item{
     border-right:             1px solid gray;
@@ -26,39 +49,4 @@
     .price-box{
         text-align:             right;   
     }
-}
-#brands{
-   .brand-title{
-        font-size:              16px;
-        text-align:             center;
-        line-height:            68px;
-   }
-}
-.shopby-title{
-    text-align:                 center;   
-}
-#brands{
-    border:                     1px solid @primary_background_color;
-    .brand-title{
-        background-color:       @primary_background_color;
-        color:                  #ffffff;
-    }
-}
-.csslider .controls a{
-    top:                        29px !important;   
-}
-.tabs_control{
-    li.ui-state-default{
-        a{
-            background:       @primary_background_color !important;
-            color:               #ffffff !important; 
-            padding:             10px 18px !important;  
-        }
-        &.ui-tabs-selected, &:hover{
-            a{
-                background:    @secondary_background_color !important;
-            }
-        }
-    }
-    
 }

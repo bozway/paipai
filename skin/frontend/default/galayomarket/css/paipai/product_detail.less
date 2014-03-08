@@ -1,0 +1,51 @@
+@primary_background_color:       #f28d2b;
+@secondary_background_color:     #80a111;
+.paipai-sidebar-elem {
+    &.left {
+        width:          120px;
+        float:          left; 
+        img {width:          120px;}
+    }
+    &.right {
+        width:          80px;
+        float:          right;
+    }
+    &.clr {
+        clear:          both;
+        padding-top:    10px;
+    }
+}
+.block-title {
+    text-align:         center;   
+}
+
+.product-view {
+    .box {
+        border:         1px solid @primary_background_color;
+    }
+    .tabs_control {
+        height:         31px;
+    }
+    .ui-tabs-nav li.ui-tabs-selected h2{
+        height:         31px;
+        background:     @primary_background_color;
+    }
+    .ui-tabs-nav li {
+        h2 {
+            height:         31px;
+            padding-left:   20px;
+            padding-right:  20px;
+            background:     @secondary_background_color;
+            a {color:       white;}
+        }
+    }
+    .ui-tabs .ui-tabs-nav li a {
+        border:         none;
+    }
+    .ui-tabs .ui-tabs-nav li a:hover, 
+    .ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+        color:          white;
+        background:     transparent;
+        border:         none;
+    }
+}

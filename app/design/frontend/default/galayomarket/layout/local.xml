@@ -17,19 +17,33 @@
     </catalogsearch_result_index>
 
     <catalog_product_view>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/paipai/product_detail.css</name>
+            </action>
+        </reference> 
     	<reference name="product.info">
     		<action method="setTemplate">
     			<template>customization/catalog/product/view.phtml</template>
     		</action>
+            <remove name="product.info.additional" />
+            <remove name="product.info.additonal_collateral" />
     	</reference>
         <reference name="left">
-            <block type="catalog/product_list_upsell" template="catalog/product/list/upsell.phtml" before="catalog.product.related" />
+            <block type="catalog/product_list_upsell" template="customization/catalog/product/sidebar/upsell.phtml" before="catalog.product.related" />
             <remove name="left.catalog.compare.sidebar" /> 
             <remove name="left.poll" />
         </reference>
     </catalog_product_view>
 
     <review_product_list>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/paipai/product_detail.css</name>
+            </action>
+        </reference> 
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
