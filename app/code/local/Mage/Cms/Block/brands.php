@@ -10,7 +10,7 @@ class Mage_Cms_Block_Brands extends Mage_Core_Block_Template
 {
     public function showAllBrands(){
         $brand_array = array();
-        $subCats = Mage::getModel('catalog/category')->load(11)->getChildren();
+        $subCats = Mage::getModel('catalog/category')->loadByAttribute('url_key','brands')->getChildren();
         $subCatIds = explode(',',$subCats);
         if(count($subCatIds) > 1){
             foreach($subCatIds as $subCatId){
