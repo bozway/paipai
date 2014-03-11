@@ -7,6 +7,9 @@
 				<name>css/paipai/local_wei.css</name>
 			</action>
 		</reference>
+        <reference name="top.links">
+            <remove name="wishlist_link"/>
+        </reference>
 	</default>
 
 	<catalogsearch_result_index translate="label">
@@ -69,6 +72,7 @@
             <remove name="customer_account_navigation"/>
             <remove name="catalog.compare.sidebar"/>
             <remove name="wishlist_sidebar"/>
+            <remove name="sale.reorder.sidebar"/>
             <block type="customer/account_navigation" name="paipai_customer_account_navigation" before="-" template="customer/account/navigation.phtml">
                 <action method="addLink" translate="label" module="customer"><name>account</name><path>customer/account/</path><label>Paipai Account</label></action>
                 <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
@@ -95,6 +99,7 @@
     <customer_account_index>
         <reference name="customer_account_dashboard">
             <remove name="customer_account_dashboard_info1"/>
+            <remove name="customer_account_dashboard_top"/>
         </reference>
     </customer_account_index>
 

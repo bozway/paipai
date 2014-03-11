@@ -245,7 +245,7 @@ Default layout, loads most of the pages
                 <reference name="area02">                
                     <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
                         <label>Navigation Bar</label>
-                        <!-- fix for ver 1620 -->
+                        <!-- fix getimfor ver 1620 -->
                         <!--block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/-->
                     </block>
                 </reference>
