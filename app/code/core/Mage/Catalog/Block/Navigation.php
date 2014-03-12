@@ -306,6 +306,12 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         $html[] = $htmlLi;
 
         $html[] = '<a href="'.$this->getCategoryUrl($category).'"'.$linkClass.'>';
+//        if($category->getThumbnail()){
+            $html[] = '<span>' . '<img src="' . $this->getBaseUrl()."/media/catalog/category/".$category->getThumbnail() . '" width="25" height="25">' . '</span>';
+//        }
+//        else{
+//            $html[] = '<span>' . '<img src="' . $this->getSkinUrl('images/category_thumbnail_example.png') . '" width="25" height="25">' . '</span>';
+//        }
         $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
         $html[] = '</a>';
 
