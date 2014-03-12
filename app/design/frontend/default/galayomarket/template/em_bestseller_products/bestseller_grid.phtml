@@ -69,11 +69,16 @@
 								
 								<!--product description-->
 								<?php if ($this->ShowDesc()=='true'):
-									$desc = $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description');
-									if(strlen($desc)>80) { //dem ki tu chuoi $str, 80 la chieu dai muon quy dinh
-										$strCutTitle = substr($desc, 0, 80); //cat 80 ki tu dau
-										$desc = substr($strCutTitle, 0, strrpos($strCutTitle, ' '));
-									}		
+									//$desc = $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description');
+
+									// modification for paipai: 
+									// since when short des exceed 26 words, it simply dose not show it, so I have to modify the logic here to make sure it work correctly.
+									$desc = $_product->getShortDescription();
+
+									// if(strlen($desc)>80) { //dem ki tu chuoi $str, 80 la chieu dai muon quy dinh
+									// 	$strCutTitle = substr($desc, 0, 80); //cat 80 ki tu dau
+									// 	$desc = substr($strCutTitle, 0, strrpos($strCutTitle, ' '));
+									// }		
 								?>
 									<p class="desc"><?php echo $desc; ?></p>
 								<?php endif ;?>
