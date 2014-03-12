@@ -15,6 +15,12 @@
                 <remove name="galayomarket.catalog.topnav"/>
             </reference>
         </reference>
+        <reference name="before_body_end">
+            <remove name="store_switcher" />
+            <remove name="color_variation" />
+            <remove name="em_variation_tpl" />
+            <remove name="mobile_view" />
+        </reference>
 	</default>
 
 	<catalogsearch_result_index translate="label">

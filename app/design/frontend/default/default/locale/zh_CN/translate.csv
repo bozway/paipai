@@ -16,8 +16,12 @@
 "Retrieve your password here","找回你的密码?"
 "Please enter your email address below. You will receive a link to reset your password.","请输入邮件地址,你将会收到一个链接来从新设置你的密码."
 "Back to Login","返回登录"
+"Availability:", "库存："
+"In Stock","有货"
+"In stock","有货"
+"In stock.","有货。"
 "SKU: ", "商品编号："
-"Brand: ", "品牌"
+"Brand: ", "品牌："
 "Manufacture country: ", "产地："
 "Weight: ", "净含量："
 "Ratings: ", "商品评价："
@@ -41,3 +45,6 @@
 "Sales","促销"
 "By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.","注册账号可以让你拥有加快结账速度,存储多个送货地址,查看和追踪你的订单等等功能."
 "SHOP BY DEPARTMENT","全部产品分类"
+
+
+
