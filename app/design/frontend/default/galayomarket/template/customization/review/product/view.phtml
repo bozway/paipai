@@ -40,6 +40,7 @@
 
 <?php list($_prev_prod, $_next_prod) = Mage::helper('yomarketsettings/product')->getPreviousNextProducts($this->getProduct()); ?>
 
+<!--
 <div id = "prev_next" >
     <?php if($_prev_prod != NULL): ?>
     <div class="previous_wrap"><a title="<?php echo $this->__('Previous Product') ?>" href="<?php echo $_prev_prod->getProductUrl(); ?>" class="button_previous"><?php echo $this->__('Previous Product') ?></a></div>
@@ -49,7 +50,7 @@
     <div class="next_wrap"><a title="<?php echo $this->__('Next Product') ?>" href="<?php echo $_next_prod->getProductUrl(); ?>" class="button_next"><?php echo $this->__('Next Product') ?></a></div>
     <?php endif; ?>
 </div>
-
+-->
 
             
 
@@ -90,8 +91,9 @@
                             <span class="or"><?php echo $this->__('OR') ?></span>
                         <?php endif; ?>
                     <?php endif; ?>
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
+                    <?php echo $this->getChildHtml('other');?>
                 </div>
-                <?php echo $this->getChildHtml('extra_buttons') ?>
             <?php endif; ?>
             
 
@@ -101,7 +103,7 @@
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
-            <?php echo $this->getChildHtml('other');?>
+            
             <?php echo $this->getChildHtml('short_des_after'); ?>
 
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>

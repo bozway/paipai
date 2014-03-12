@@ -76,22 +76,22 @@
             <?php echo $this->getTierPriceHtml() ?>
             
             <!-- Product SKU -->
-            <div><?= $this->__('SKU: '); ?><?= $_product->getSku();?></div>
+            <div class="product-info-item"><?= $this->__('SKU: '); ?><?= $_product->getSku();?></div>
 
             <!-- Product Brand -->
-            <div><?= $this->__('Brand: '); ?><?= $_product->getAttributeText('manufacturer');?></div>
+            <div class="product-info-item"><?= $this->__('Brand: '); ?><?= $_product->getAttributeText('manufacturer');?></div>
 
 
             <!-- Product Manufacturing Country -->
-            <div><?= $this->__('Manufacture country: '); ?><?= $_product->getAttributeText('country_of_manufacture');?></div>
-            <div><?= $this->__('Weight: '); ?><?= $_product->getWeight();?></div>
+            <div class="product-info-item"><?= $this->__('Manufacture country: '); ?><?= $_product->getAttributeText('country_of_manufacture');?></div>
+            <div class="product-info-item"><?= $this->__('Weight: '); ?><?= $_product->getWeight();?></div>
 
 
             <?php 
                 $block = Mage::app()->getLayout()->createBlock('catalog/product_list');
                 $html = $block->getReviewsSummaryHtml($_product, 'short');
             ?>
-            <div><?= $this->__('Ratings: ');?><?= $html;?></div>
+            <div class="product-info-item"><?= $this->__('Ratings: ');?><?= $html;?></div>
 
 
             <!--
