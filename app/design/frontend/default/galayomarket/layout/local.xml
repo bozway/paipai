@@ -46,6 +46,11 @@
     	</reference>
         <reference name="left">
             <block type="catalog/product_list_upsell" template="customization/catalog/product/sidebar/upsell.phtml" before="catalog.product.related" />
+            <block type="cms/block" name="product-view-sidebar-ad">
+                <action method="setBlockId">
+                    <block_id>product_detail_sidebar_ad</block_id>
+                </action>
+            </block>
             <remove name="left.catalog.compare.sidebar" /> 
             <remove name="left.poll" />
         </reference>
