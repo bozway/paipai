@@ -10,6 +10,11 @@
         <reference name="top.links">
             <remove name="wishlist_link"/>
         </reference>
+        <reference name="area02">
+            <reference name="top.menu">
+                <remove name="galayomarket.catalog.topnav"/>
+            </reference>
+        </reference>
 	</default>
 
 	<catalogsearch_result_index translate="label">

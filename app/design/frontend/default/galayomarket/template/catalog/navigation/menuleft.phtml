@@ -46,7 +46,8 @@
 						$("#menuleftText").unbind("click");
 						if (!($("body").hasClass("cms-index-index"))){
 							container.hide();
-							$("#menuleft").parent().hover(
+                            $("#menuleft").parent().unbind("hover");
+                            $("#menuleft").parent().hover(
 								function( event ){
 									event.preventDefault();
 									container.fadeToggle('fast');
@@ -56,7 +57,8 @@
 					}else{
 						$("#menuleft").parent().unbind("mouseenter mouseleave");
 						container.hide();
-						$("#menuleftText").click(
+                        $("#menuleftText").unbind("click");
+                        $("#menuleftText").click(
 							function( event ){
 								event.preventDefault();
 								container.fadeToggle('fast');
@@ -86,7 +88,7 @@
     </script>
     <div class="em_nav">
         <div>
-            <div class="shopby-title" id="menuleftText"><a href="#">SHOP BY DEPARTMENT</a><span class="option">nav</span></div>
+            <div class="shopby-title" id="menuleftText"><a href="#"><?=$this->__("SHOP BY DEPARTMENT")?></a><span class="option">nav</span></div>
             <ul class="vnav" id="menuleft" <?php if(!Mage::getBlockSingleton('page/html_header')->getIsHomePage()): ?>style="display: none;"<?php endif ?>>
                 <li class="menu-item-depth-0">
                     <ul class="em-catalog-navigation">
