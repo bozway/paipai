@@ -196,6 +196,26 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
     }
 
     /**
+     * Get image for category data
+     *
+     * @param Mage_Catalog_Model_Category $category
+     * @return string
+     */
+    public function getCatThumbnailUrl($category)
+    {
+        if ($category instanceof Mage_Catalog_Model_Category) {
+            $url = Mage::getBaseUrl('media').'catalog/category/' . $category->getThumbnail();
+        } else {
+            $cat_id = $this->_getCategoryInstance()
+                ->setData($category->getData())
+                ->getId();
+            $url = Mage::getBaseUrl('media').'catalog/category/' . Mage::getModel('catalog/category')->load($cat_id)->getThumbnail();
+        }
+
+        return $url;
+    }
+
+    /**
      * Return item position representation in menu tree
      *
      * @param int $level
@@ -306,6 +326,7 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         $html[] = $htmlLi;
 
         $html[] = '<a href="'.$this->getCategoryUrl($category).'"'.$linkClass.'>';
+        $html[] = '<span>' . '<img src="' . $this->getCatThumbnailUrl($category) . '" width="25" height="25">' . '</span>';
         $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
         $html[] = '</a>';
 

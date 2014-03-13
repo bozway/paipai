@@ -1,0 +1,7 @@
+<div id="brand_list" class="grid_24 alpha omega">
+      <ul>
+          <?php foreach($this->showAllBrands() as $brand):?>
+              <li><a href="<?=$brand['url']?>"><img title="<?=$brand['name']?>" src="<?=$brand['img_src']?>" alt="<?=$brand['name']?>" height="58"/></a></li>
+          <?php endforeach;?>
+      </ul>
+</div>
