@@ -131,4 +131,10 @@
             </action>
         </reference>
     </contacts_index_index>
+
+    <catalog_category_layered>
+        <reference name="left">
+            <remove name="left.catalog.compare.sidebar"/>
+        </reference>
+    </catalog_category_layered>
 </layout>

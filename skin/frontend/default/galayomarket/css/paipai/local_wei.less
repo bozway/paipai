@@ -3,12 +3,15 @@
 @border_color:                   #d4d4d4;
 
 //containers layout
-.container_24:not(.header-container,.em-footerinfo){
+.container_24:not(.header-container){
     margin-bottom:          15px;
     &:after{
         content:            "";
         clear:              both;
         display:            block;
+    }
+    &.em-footerinfo{
+        margin-bottom:      0px;   
     }
 }
 
