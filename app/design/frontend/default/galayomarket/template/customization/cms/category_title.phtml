@@ -1,0 +1,5 @@
+<?php $_category = $this->getCategoryEngity(); ?>
+<a href="<?= $_category->getUrlPath(); ?>">
+	<img src="<?= Mage::getBaseUrl('media').'catalog/category/'.$_category->getThumbnail()  ?>" />
+	<span><?= $_category->getName(); ?></span>
+</a>
