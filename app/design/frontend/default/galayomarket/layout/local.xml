@@ -131,4 +131,32 @@
             </action>
         </reference>
     </contacts_index_index>
+
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <action method="setTemplate">
+                <template>customization/checkout/onepage.phtml</template>
+            </action>
+        </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/paipai/checkout.css</name>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <action method="setTemplate">
+                <template>customization/checkout/cart.phtml</template>
+            </action>
+        </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/paipai/checkout.css</name>
+            </action>
+        </reference>
+    </checkout_cart_index>
 </layout>
