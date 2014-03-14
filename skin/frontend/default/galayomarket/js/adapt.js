@@ -76,6 +76,9 @@ function adapt() {
 	//var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth || 0;
 	var width = jQuery(window).width();
 
+	// disable adapt
+	width = 1280;
+
 	if (isMobile) {
 		if (isPhone || screen && screen.width < 760)
 			width = Math.min(760, screen.width);
