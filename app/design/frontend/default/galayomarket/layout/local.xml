@@ -23,6 +23,17 @@
         </reference>
 	</default>
 
+    <cms_index_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>slimscroll/jquery.slimscroll.min.js</script>
+            </action>
+            <action method="addJs">
+                <name>paipai/homepage.js</name>
+            </action>
+        </reference>
+    </cms_index_index>
+
 	<catalogsearch_result_index translate="label">
         <label>Quick Search Form</label>
         <reference name="root">
