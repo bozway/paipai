@@ -71,10 +71,15 @@ $setting = Mage::helper('yomarketsettings');
         <?php endif;?>
     </td>
     <td class="a-center">
+        <!--
         <?php if ($isVisibleProduct): ?>
         <a href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item parameters') ?>"><?php echo $this->__('Edit') ?></a>
         <?php endif ?>
+        -->
     </td>
+
+    <td class="a-center"></td>
+    <!--
     <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
     <td class="a-center">
         <?php if ($isVisibleProduct): ?>
@@ -82,6 +87,7 @@ $setting = Mage::helper('yomarketsettings');
         <?php endif ?>
     </td>
     <?php endif ?>
+    -->
 
     <?php if ($canApplyMsrp): ?>
         <td class="a-right"<?php if ($this->helper('tax')->displayCartBothPrices()): ?> colspan="2"<?php endif; ?>>
