@@ -107,6 +107,7 @@
                     <?php endif; ?>
 					
                     <!--show button add to cart-->
+                    <!--
                     <?php if ($setting->getProductsList_ShowAddtocart()): ?>
 						<?php if($_product->isSaleable()): ?>
 							<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
@@ -114,9 +115,11 @@
 							<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
 						<?php endif; ?>
 					<?php endif; ?>
+					-->
 						
                     
                     <!--show button add to compare-wishlist-->
+                    <!--
                     <?php if ($setting->getProductsList_ShowAddto()): ?> 
 						<ul class="add-to-links">
 							<?php if ($this->helper('wishlist')->isAllow()) : ?>
@@ -127,6 +130,7 @@
 							<?php endif; ?>
 						</ul>
                     <?php endif; ?>
+                    -->
                 </div>
             </div>
         </li>
@@ -193,6 +197,7 @@
 			
             <div class="actions">
 				<!--show button add to cart-->
+				<!--
 				<?php if ($setting->getProductsGrid_ShowAddtocart()): ?>  
 					<?php if($_product->isSaleable()): ?>
 						<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
@@ -200,8 +205,10 @@
 						<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
 					<?php endif; ?>
 				<?php endif; ?>
+				-->
 
 				<!--show button add to compare-wishlist-->
+				<!--
 				<?php if ($setting->getProductsGrid_ShowAddto()): ?>   
 					<ul class="add-to-links">
 						<?php if ($this->helper('wishlist')->isAllow()) : ?>
@@ -212,6 +219,7 @@
 						<?php endif; ?>
 					</ul>
 				<?php endif; ?>
+				-->
             </div>
         </div>
         </li>
