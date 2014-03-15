@@ -33,7 +33,7 @@
 			<?php endif;?>
             <li class="<?php echo $_crumbName ?>">
             <?php if($_crumbInfo['link']): ?>
-                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
+                <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->__($this->escapeHtml($_crumbInfo['label'])); ?></a>
             <?php elseif($_crumbInfo['last']): ?>
                 <?php
                     $result =  $this->escapeHtml($_crumbInfo['label']);
