@@ -64,6 +64,7 @@
             </block>
             <remove name="left.catalog.compare.sidebar" /> 
             <remove name="left.poll" />
+            <remove name="catalog.product.related" />
         </reference>
     </catalog_product_view>
 
