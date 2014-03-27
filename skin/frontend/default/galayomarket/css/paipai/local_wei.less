@@ -165,7 +165,8 @@ p.required{
 .page-title{
     border-left:                8px solid @primary_background_color !important;
     h1{
-        font-size:              100% !important;
+        font-size:              15px !important;
+        font-weight:            100 !important;
         color:                  @primary_background_color !important;
         padding:                6px 16px !important;
         background:             none !important;
@@ -174,7 +175,6 @@ p.required{
 .box-head{
     border-left:                6px solid @primary_background_color;
     h2{
-        font-size:              100% !important;
         color:                  @primary_background_color !important;
         padding:                6px 16px !important;
     }
@@ -201,7 +201,7 @@ p.required{
 
 // Top Header
 .header.small {
-    font-size:              12px;
+    font-size:              13px;
     font-weight:            100;
 }
 
@@ -213,6 +213,20 @@ p.required{
 }
 #search {
     .font_regular();   
+}
+
+// cart sidebar
+#cart-sidebar .product-details {
+    .btn-remove {
+        left:           2px;
+    }
+    .btn-edit {
+        left:           0px;
+        top:            25px;
+    }
+}
+.top-cart-content .button.button, a.manage-address {
+    .font_large();   
 }
 
 // Vertical Nav
@@ -248,8 +262,11 @@ div.em_nav .hnav li {
     ul {.font_regular();}
     .grid_6 p {.font_regular();}
 }
-    
-    
+
+// toolbar
+div.toolbar {
+    .font_regular();   
+}
         
 
 // ------------------ Home page -----------------------
@@ -305,4 +322,186 @@ div.product-view .form-add {
         .font_large();   
     }
 }
+
+// --------------- CONTACT PAGE ------------------
+#contactForm {
+    input.input-text, select, textarea {
+        .font_regular();
+    }
+    button.button, a.manage-address {
+        .font_large();
+    }
+    .font_regular();
+}
+
+// -------------- Category Product Page -------------------
+.category-products {
+    .product-name h3, .product-name h4, .product-name h2, .product-name a {
+        .font_regular();
+        display:            block;
+        max-height:         35px;
+        overflow:           hidden;
+    }
+    .products-grid .price-box {
+        margin-bottom:      0px;
+        .old-price, .price {
+            .font_regular();   
+        }
+    }
+}
+div.category-products .products-grid li.item .actions {
+    padding-top:        10px;   
+}
+div.category-products .products-grid li.item:hover .price-box .price-label, 
+div.category-products .products-grid li.item:hover .price-box .label{
+    display:            inline;   
+}
+div.category-products .products-grid li.item:hover .price-box {
+    display:            block;
+}
+div.category-products .products-grid li.item:hover .price-box {
+    .price {
+        color:              #F28D2B;
+        font-size:          14px;
+    }
+    .old-price .price {
+        color:              #999;  
+    }
+}
+div.category-products .products-grid li.item .price-hover {
+    display:            none;   
+}
+
+// ----------------- SHOPPING CART ----------------------
+.cart {
+    .data-table th {
+        .font_regular();   
+    }
+    .product-name h3, .product-name h4, .product-name h2, .product-name a {
+        .font_regular();   
+    }
+    .price {
+        .font_regular();   
+    }
+    .button.button, a.manage-address {
+        .font_large();   
+    }
+    .cart-table tfoot td button.button.btn-continue {
+        .font_large();
+    }
+    input.input-text, select, textarea {
+        .font_regular();   
+    }
+}
+div.cart {
+    .cart-collaterals h2 {
+        .font_large();   
+        font-weight:            bold;
+    }
+    .discount label {
+        .font_regular();   
+    }
+    .shipping-form p {
+        .font_regular();
+    }
+    .shipping-form label {
+        .font_regular();   
+    }
+    .cart-collaterals .totals tbody td{
+        .font_regular();   
+    }
+}
+
+// ---------------- CHECKOUT PAGE -------------------
+#checkout-progress-wrapper {
+    .block-progress .block-content dt {
+        .font_regular();   
+    }
+    .block-progress dd address {
+        font-size:          12px;
+        border:             1px solid grey;
+        padding:            10px;
+    }
+}
+#checkoutSteps {
+    .font_regular();
     
+    input.input-text, select, textarea, button.button, 
+    a.manage-address .block .actions a, .buttons-set p.back-link a{
+        .font_regular();   
+    }
+    &.opc li .step h4, &.opc li .step h3{
+        font-size:              14px;
+    }
+    #checkout-step-shipping_method dl dd, 
+    #checkout-step-shipping_method dl dt,
+    #checkout-payment-method-load dt{
+        .font_regular();   
+    }
+    .price {
+        .font_regular();
+    }
+}
+
+// ---------------- ORDER REVIEW PAGE --------------------
+#order_review_form {
+    ul ul, ul ol, ol ol, ol ul {
+        .font_regular(); 
+    }
+    input.input-text, select, textarea, button.button, 
+    a.manage-address .block .actions a, .buttons-set p.back-link a,
+    table, .data-table th, .product-name, .price {
+        .font_regular();   
+    }
+    .data-table th {
+        min-width:          30px;   
+    }
+}
+
+// ------------------- ORDER SUCCEED PAGE --------------------
+body.checkout-onepage-success {
+    .font_regular();
+    h2.sub-title {
+        .font_regular();
+        margin-top:         20px;
+    }
+    .page-title {
+        .font_large();
+        background: linear-gradient(to bottom, #FFF 0%,#EBEBEB 100%);
+    }
+}
+
+// ------------------- LOGIN/REG PAGE --------------------------------
+.account-create form, .account-login form{
+    .font_regular();
+    h2 .fieldset .legend{
+        font-size:              14px;
+    }
+    input.input-text, select, textarea, button.button, 
+    a.manage-address .block .actions a, .buttons-set p.back-link a{
+        .font_regular();   
+    }
+}
+
+// ---------------------- USER DASHBOARD ---------------------------
+.my-account {
+    .font_regular();
+    .dashboard .welcome-msg {
+        .font_regular();
+    }
+    .box-head h2 {
+        .font_large();   
+    }
+    .box-info .col-1 .box-title h3, .box-info .col-2 .box-title h3 {
+        font-size:              14px;   
+    }
+    .box-title a {
+        .font_regular();   
+    }
+    button.button,.block .actions a, .buttons-set p.back-link a {
+        .font_large();
+    }
+}
+.col-left .block.block-account {
+    .font_regular();   
+}
