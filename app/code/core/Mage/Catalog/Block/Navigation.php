@@ -204,12 +204,20 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
     public function getCatThumbnailUrl($category)
     {
         if ($category instanceof Mage_Catalog_Model_Category) {
-            $url = Mage::getBaseUrl('media').'catalog/category/' . $category->getThumbnail();
+            $filename = $category->getThumbnail();
+            if($filename)
+                $url = Mage::getBaseUrl('media').'catalog/category/' . $filename;
+            else
+                $url = false;
         } else {
             $cat_id = $this->_getCategoryInstance()
                 ->setData($category->getData())
                 ->getId();
-            $url = Mage::getBaseUrl('media').'catalog/category/' . Mage::getModel('catalog/category')->load($cat_id)->getThumbnail();
+            $filename = Mage::getModel('catalog/category')->load($cat_id)->getThumbnail();
+            if($filename)
+                $url = Mage::getBaseUrl('media').'catalog/category/' . $filename;
+            else
+                $url = false;
         }
 
         return $url;
@@ -326,7 +334,10 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         $html[] = $htmlLi;
 
         $html[] = '<a href="'.$this->getCategoryUrl($category).'"'.$linkClass.'>';
-        $html[] = '<span>' . '<img src="' . $this->getCatThumbnailUrl($category) . '" width="25" height="25">' . '</span>';
+        $categoryImgUrl = $this->getCatThumbnailUrl($category);
+        if($categoryImgUrl) {
+            $html[] = '<span>' . '<img src="' . $categoryImgUrl . '" width="25" height="25">' . '</span>';
+        }
         $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
         $html[] = '</a>';
 
