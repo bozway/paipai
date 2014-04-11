@@ -79,13 +79,14 @@ function adapt() {
 	// disable adapt
 	width = 1280;
 
+	/*
 	if (isMobile) {
 		if (isPhone || screen && screen.width < 760)
 			width = Math.min(760, screen.width);
 		else
 			width = isLandscape() ? screen.height : screen.width;
 	}
-
+	*/
 
 	// While loop vars.
 	var arr, arr_0, val_1, val_2, is_range, file;
