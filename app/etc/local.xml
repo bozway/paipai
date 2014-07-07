@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[192.168.1.200]]></host>
                     <username><![CDATA[devpaipa_mage]]></username>
-                    <password><![CDATA[7SRDJP1!1@]]></password>
+                    <password><![CDATA[omega2014]]></password>
                     <dbname><![CDATA[devpaipa_mage]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
