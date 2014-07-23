@@ -40,9 +40,9 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[192.168.1.200]]></host>
-                    <username><![CDATA[devpaipa_mage]]></username>
-                    <password><![CDATA[omega2014]]></password>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[goodselected]]></username>
+                    <password><![CDATA[6L8W2PyTh2CMRWW7]]></password>
                     <dbname><![CDATA[devpaipa_mage]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
