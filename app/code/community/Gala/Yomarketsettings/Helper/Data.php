@@ -99,7 +99,8 @@ class Gala_Yomarketsettings_Helper_Data extends Mage_Core_Helper_Abstract
 		if($parent->getLevel() == 1){
             $result = "<option value='0'>".$this->getCatNameCustom($parent)."</option>";
 		}			
-		else{
+		else if ($parent->getLevel() == 2) {
+			// Only display top lvl categories.
 			$result = "<option value='".$parent->getId()."' ";
 			
 			if($curId){
@@ -127,9 +128,11 @@ class Gala_Yomarketsettings_Helper_Data extends Mage_Core_Helper_Abstract
 	public function getCatNameCustom($category){
 		$level = $category->getLevel();
 		$html = '';
-		for($i = 0;$i < $level;$i++){
-			$html .= '&mdash;&ndash;';
-		}
+		// for($i = 0;$i < $level;$i++){
+		// 	$html .= '&mdash;&ndash;';
+		// }
+		// Add only 1 dash to every option.
+		$html .= '&dash;';
 		if($level == 1)	return $html.' '.$this->__("All Categories");
 		else return $html.' '.$category->getName();
 	}
