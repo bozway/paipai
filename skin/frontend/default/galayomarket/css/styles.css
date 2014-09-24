@@ -681,7 +681,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-image{position:relative}
 .products-grid .product-name { margin:0 0 5px; font-weight:bold; }
 .products-grid .product-name a {}
-.products-grid .price-box { margin:10px 0 16px; }
+.products-grid .price-box { /*margin:10px 0 16px;*/ }
 .products-grid .availability { line-height:21px; }
 .products-grid .ratings .rating-box { /*margin-top:2px; *margin-top:3px;*/ }
 .col2-left-layout .products-grid,
@@ -758,7 +758,7 @@ tr.summary-details-excluded { font-style:italic; }
 .old-price .price { font-weight:bold; text-decoration:line-through;color:#999999 }
 
 /* Special price */
-.special-price {}
+.special-price {margin: 0;}
 .special-price .price-label { font-weight:bold; white-space:nowrap; }
 .special-price .price { font-weight:bold; }
 
