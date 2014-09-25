@@ -151,7 +151,7 @@ ol.hoz:after,
 
 /*========== Products Grid */
 ul.products-grid { padding:0; list-style:none; border:0 }
-.products-grid li.item { padding:10px;margin-bottom:20px;-webkit-transition: box-shadow 0.2s linear; height: 200px;}
+.products-grid li.item { padding:10px;margin-bottom:20px;-webkit-transition: box-shadow 0.2s linear;}
 .products-grid li.item.last{ margin-right:0!important}
 /*hieu ung hover*/
 .category-products .products-list li.item{padding:10px;}
@@ -310,7 +310,7 @@ background-color: white;}
 .product-view .product-essential .add-to-links .link-compare:hover{background-position:-485px -752px }
 .product-view .product-essential .add-to-links li a{width:auto; height:auto; text-indent:0 ; padding:4px 15px 4px 23px;font-size:90%}
 .required em{color:/*BEGIN:secondary_color*/#ed2f15/*END:secondary_color*/}
-.product-shop .price-box {position: absolute; bottom: 0; right: 20px;}
+.product-shop .price-box {margin-bottom: 10px;}
 .product-view .short-description{margin:10px 0;}
 .grid_content .product-view .std{padding:0}
 .product-view .box-collateral,.product-view .box-collateral.box-reviews h2 {}

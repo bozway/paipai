@@ -49,11 +49,17 @@
         }
     }   
 }
+.price-box {
+    position:   absolute;
+    bottom:     0 !important;
+    right:      20px;
+    margin:     0;
+}
 .new-product-item{
-    border-right:             1px solid #d4d4d4;
+    border-right:             1px solid #d4d4d4 !important;
     padding-right:            20px !important;
     &:last-child{
-        border-right:           0px;   
+        border-right:           0px !important;
     }
     .product-name{
         text-align:             right;   
@@ -148,6 +154,15 @@
         }
         .products-grid {
             margin-top:         10px;
+            li.item { 
+                height: 200px !important;
+                .price-box {
+                    position:   absolute;
+                    bottom:     0;
+                    right:      20px;
+                    margin:     0;
+                }
+            }
         }
         .csslider a.next, .csslider a.prev {
             top: 10px !important;
@@ -183,4 +198,10 @@
             border-bottom:      1px solid #d4d4d4;
         }
     }
+}
+.em-widget-new-products-grid, .em-widget-bestseller-products-grid, .em-widget-sale-products-grid {
+    .products-grid li.item {
+        border: none;
+        height: auto;
+    }    
 }
