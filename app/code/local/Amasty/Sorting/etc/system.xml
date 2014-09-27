@@ -87,7 +87,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment><![CDATA[If it is not important, select "No" to optimize server resources usage.]]></comment>
+                            <comment><![CDATA[If it is not important, select `No` to optimize server resources usage.]]></comment>
                         </no_image_last> 
                         <out_of_stock_last translate="label">
                             <label>Show `Out of Stock` Products Last</label>
@@ -97,7 +97,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment><![CDATA[If it is not important, select "No" to optimize server resources usage.]]></comment>
+                            <comment><![CDATA[If it is not important, select `No` to optimize server resources usage.]]></comment>
                         </out_of_stock_last> 
                         <out_of_stock_qty translate="label">
                             <label>Use qty to determine if the product is `Out of Stock`</label>

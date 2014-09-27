@@ -1,0 +1,18 @@
+1) Using CMS:
+
+{{block type="amsorting/featured" sorting="bestselling" 
+limit="3" header="Best Sellers" template="amsorting/plain.phtml"}}
+
+
+
+2) Using layout updates:
+
+<reference name="right">
+        <block type="amsorting/featured" name="amsorting.featured" template="amsorting/sidebar.phtml" before="-">
+            <action method="setLimit"><limit>5</limit></action>
+            <action method="setSorting"><sorting>bestselling</sorting></action>
+            <action method="setHeader"><header>Best Sellers</header></action>    
+        </block>
+</reference>
+
+

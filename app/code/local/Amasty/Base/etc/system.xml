@@ -70,6 +70,23 @@
                         </interests>
                     </fields>
                 </feed>
+            <conflicts translate="label">
+                    <label><![CDATA[Conflicts<script>
+                        function ambaseShow(url){
+                            new Ajax.Request(url, {
+                                onSuccess: function(response) {
+                                    $("ambase_conflicts_container").update(response.transport.response)
+                                }
+                            });
+                        }
+                    </script>]]></label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>ambase/conflicts</frontend_model>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </conflicts>
             </groups>
         </ambase>
     </sections>

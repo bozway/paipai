@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Amasty_Base>
-      <version>1.0.3</version>
+      <version>1.1.0</version>
     </Amasty_Base>
   </modules>
   
@@ -44,6 +44,17 @@
 	  </helpers>
 	</global>
 	
+<admin>
+            <routers>
+                <ambase>
+                        <use>admin</use>
+                        <args>
+                            <module>Amasty_Base</module>
+                            <frontName>ambase</frontName>
+                        </args>
+                </ambase>
+            </routers>
+        </admin>
 	<adminhtml>
         <layout>
             <updates>
