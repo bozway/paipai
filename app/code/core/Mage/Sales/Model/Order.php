@@ -1270,7 +1270,7 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
         $emailSentAttributeValue = $this->load($this->getId())->getData('email_sent');
         $this->setEmailSent((bool)$emailSentAttributeValue);
         if ($this->getEmailSent()) {
-            return $this;
+            // return $this;
         }
 
         // Get the destination email addresses to send copies to
